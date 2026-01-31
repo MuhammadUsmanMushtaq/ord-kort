@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Flashcard as FlashcardType } from "../types/types.ts";
 
 interface FlashcardProps {
@@ -8,6 +8,11 @@ interface FlashcardProps {
 
 const Flashcard: React.FC<FlashcardProps> = ({ card, onFlip }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  // Reset flip state when card changes
+  useEffect(() => {
+    setIsFlipped(false);
+  }, [card]);
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
@@ -25,7 +30,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ card, onFlip }) => {
       <div
         className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${isFlipped ? "rotate-y-180" : ""}`}
       >
-        {/* Front of card */}
+        {/* Front Always English */}
         <div className="absolute w-full h-full backface-hidden rounded-2xl p-6 flex flex-col items-center justify-center bg-linear-to-br from-blue-500 to-purple-600 text-white shadow-xl">
           <div className="text-center p-8">
             <h2 className="text-4xl font-bold mb-6">{card.en}</h2>
@@ -38,7 +43,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ card, onFlip }) => {
           </div>
         </div>
 
-        {/* Back of card */}
+        {/* Back  Always Swedish */}
         <div className="absolute w-full h-full backface-hidden rounded-2xl p-6 flex flex-col items-center justify-center bg-linear-to-br from-pink-500 to-orange-500 text-white shadow-xl rotate-y-180">
           <div className="text-center p-8">
             <h2 className="text-4xl font-bold mb-3">{card.swe}</h2>
