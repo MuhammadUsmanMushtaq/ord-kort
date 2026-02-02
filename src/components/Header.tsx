@@ -8,7 +8,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div>
               <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-                <BookOpen className="text-blue-500" />
+                <BookOpen className="text-blue-500" size={32} />
                 Swedish Vocabulary Flashcards
               </h1>
             </div>

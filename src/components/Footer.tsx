@@ -1,7 +1,6 @@
 const Footer = () => {
   return (
     <>
-      {/* Footer */}
       <footer className="mt-12 pt-8">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-500 text-sm py-8 border-t border-gray-200">
