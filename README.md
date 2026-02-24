@@ -31,7 +31,6 @@ I'm learning Swedish at SIFA, where each week our teacher provides 72 new words 
 ### 📅 **Week Management**
 
 - Dropdown selector for different weekly word lists
-- Shows progress and card counts
 - Mobile-responsive design
 
 ### 📱 Responsive Design
