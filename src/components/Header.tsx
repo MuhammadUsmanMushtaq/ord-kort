@@ -4,17 +4,17 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 py-4">
-        <div className="p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="p-2 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
+              <h1 className="text-lg font-bold text-gray-800 flex items-center gap-4">
                 <BookOpen className="text-blue-500" size={32} />
                 Swedish Vocabulary Flashcards
               </h1>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 md:gap-6">
+          <div className="flex items-center justify-center gap-4 md:gap-6">
             <div className="flex items-center gap-3">
               <a
                 href="https://www.linkedin.com/in/muhammad-usman-78491149/"
